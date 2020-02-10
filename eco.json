@@ -1,0 +1,10 @@
+{
+    "apps":[
+        {
+            "name":"test",
+            "script":"npm",
+            "args":"start",
+            "watch":true
+        }
+    ]
+}

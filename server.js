@@ -10,5 +10,5 @@ const server = express();
 server.use('/',express.static(path.join(__dirname,'public')));
 
 server.listen(prod ? process.env.PORT : 3000,()=>{
-    console.log("server on");
+    console.log("server on ",prod ? process.env.PORT : 3000);
 })

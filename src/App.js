@@ -26,7 +26,10 @@ class App extends Component{
                 </div>
                 
                 <Info infoDom={this.state.info} changeInfo={this.changeinfo}/>
-                
+                <div className="MainText">
+                  i'm ricky
+                  skill list : 
+                </div>
               </div>
               <div className="imageSection">
                 <img src="" />

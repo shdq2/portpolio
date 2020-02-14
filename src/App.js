@@ -1,28 +1,44 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Menu from './Menu'
+import Info from './Info'
 class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      currentPage : ""
+      info: null
     }
   }
-
-  onClickTitle = (e)=>{
-    console.log(e.target.getAttribute('name'));
+  changeinfo = (e)=>{
+    console.log("test");
   }
   render(){
     return (
-          <div className="App">
-            <header className="App-header">
-              <div className="header-title" name="home" onClick={this.onClickTitle}><label>Home</label></div>
-              <div className="header-title" name="about" onClick={this.onClickTitle}><label>About</label></div>
-              <div className="header-title" name="skills" onClick={this.onClickTitle}><label>My Skills</label></div>
-              <div className="header-title" name="portfolio" onClick={this.onClickTitle}><label>PortFolio</label></div>
-              <div className="header-title" name="contact" onClick={this.onClickTitle}><label>Contact</label></div>
-            </header>
+          <div className="Container">
+            <div className="mainView">
+              <div className="menuSection">
+                <div className="menuTitle">
+                  <div>김상몽 ( Ricky.kim )</div>
+                  
+                  <Menu Info={this.state.info}/>
+                  
+                </div>
+                
+                <Info infoDom={this.state.info} changeInfo={this.changeinfo}/>
+                
+              </div>
+              <div className="imageSection">
+                <img src="" />
+              </div>
+            </div>
+            
+            <div className="webPage">
+            </div>
+            <div className="skills">
+            </div>
+            <div className="contact">
+            </div>
           </div>
         );
   }

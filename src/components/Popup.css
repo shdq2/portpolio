@@ -1,0 +1,33 @@
+
+.myInfo{
+  z-index:10;
+    position:fixed;
+    width:50%;
+    height:100%;
+    right:100%;
+    transition: right 1s;
+    background-color:green;
+  }
+.myInfo .myInfo-title{
+    width:100%;
+    position:relative;
+  }
+.myInfo .myInfo-title div{
+    display:inline-block;
+  }
+  
+.myInfo .myInfo-title .close{
+    position:absolute;  
+    right:20px;
+    cursor: pointer;
+  }
+
+  .Info_container{
+    width:95%;
+    height:95%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  

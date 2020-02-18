@@ -31,3 +31,37 @@
     transform: translate(-50%,-50%);
   }
   
+  .PopupTitle{
+    font-size:40px;
+    color:yellow;
+    font-weight:500;
+  }
+  .close{
+    width:30px;
+    height:30px;
+    fill:white;
+    bottom:0;
+  }
+
+  .ResumeBody{
+    color : white;
+  }
+
+  .body-bind{
+    
+    
+  }
+  .bodyItem{
+    display:inline-block;
+    width:50%;
+    margin-top:30px;
+    color:white;
+  }
+
+  .detail-Title{
+    font-size:30px;
+    color:yellow;
+    font-weight:500;
+    margin-bottom:15px;
+    
+  }

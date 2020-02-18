@@ -3,8 +3,8 @@ import React from 'react';
 const MenuComponent = ({onClickHandler})=>{
     const menuList = [
         'myInfo',
-        'link',
-        'ppt',
+        'webPage',
+        'skills',
         'contact'
     ]
     return (

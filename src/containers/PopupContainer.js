@@ -1,27 +1,27 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import PopupComponent from './../components/Popup'
-import {PopupChange} from '../store/modules/popup'
-
+import * as popupActions from '../store/modules/popup'
+import { bindActionCreators } from 'redux';
 class MainContainer extends Component{
-    handleSelect = ()=>{        
-        this.props.PopupChange();        
+    handleSelect = ()=>{  
+        const {popupActions} = this.props;
+        popupActions.PopupChange();                        
     }
-    render(){
-        const {popupOnOff} = this.props;
-        
-        return (            
-            //    <input type="button" value={popupOnOff} onClick={this.handleSelect} />
-                <PopupComponent OnOff={popupOnOff} OnOffFnc={this.handleSelect}/>            
+    render(){        
+        const {popupOnOff} = this.props;                
+        return (                        
+            <PopupComponent OnOff={popupOnOff} OnOffFnc={this.handleSelect}/>            
         )
     }
 }
 
-const mapStateToProps = state =>({
-    popupOnOff : state.popup.popupOnOff
+const mapStateToProps = ({popup}) =>({
+    popupOnOff : popup.popupOnOff
 })
 const mapDispatchToProps = dispatch =>({
-    PopupChange:()=> dispatch(PopupChange())
+    //PopupChange:()=> dispatch(PopupChange())
+    popupActions:bindActionCreators(popupActions,dispatch)
 })
 export default connect(
     mapStateToProps,

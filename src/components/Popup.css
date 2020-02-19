@@ -1,67 +1,64 @@
 
 .myInfo{
-  z-index:10;
-    position:fixed;
-    width:50%;
-    height:100%;
-    right:100%;
-    transition: right 1s;
-    background-color:green;
-  }
+z-index:10;
+  position:fixed;
+  width:50%;
+  height:100%;
+  right:100%;
+  transition: right 1s;
+  background-color:#015761;
+}
 .myInfo .myInfo-title{
-    width:100%;
-    position:relative;
-  }
+  width:100%;
+  position:relative;
+}
 .myInfo .myInfo-title div{
-    display:inline-block;
-  }
-  
+  display:inline-block;
+}
+
 .myInfo .myInfo-title .close{
-    position:absolute;  
-    right:20px;
-    cursor: pointer;
-  }
+  position:absolute;  
+  right:20px;
+  cursor: pointer;
+}
 
-  .Info_container{
-    width:95%;
-    height:95%;
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-  }
+.Info_container{
+  width:90%;
+  height:90%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.PopupTitle{
+  font-size:40px;
+  color:yellow;
+  font-weight:500;
+}
+
+.close{
+  width:30px;
+  height:30px;
+  fill:white;
+  bottom:0;
+}
+
+.ResumeBody{
+  color : white;
+}
+
+.bodyItem{
+  display:inline-block;
+  width:50%;
+  margin-top:30px;
+  color:white;
+}
+
+.detail-Title{
+  font-size:30px;
+  color:yellow;
+  font-weight:500;
+  margin-bottom:15px;
   
-  .PopupTitle{
-    font-size:40px;
-    color:yellow;
-    font-weight:500;
-  }
-  .close{
-    width:30px;
-    height:30px;
-    fill:white;
-    bottom:0;
-  }
-
-  .ResumeBody{
-    color : white;
-  }
-
-  .body-bind{
-    
-    
-  }
-  .bodyItem{
-    display:inline-block;
-    width:50%;
-    margin-top:30px;
-    color:white;
-  }
-
-  .detail-Title{
-    font-size:30px;
-    color:yellow;
-    font-weight:500;
-    margin-bottom:15px;
-    
-  }
+}

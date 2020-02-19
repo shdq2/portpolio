@@ -1,23 +1,19 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import PopupContainer from './containers/PopupContainer';
 import MenuContainer from './containers/MenuContainer';
+import LinkContainer from './containers/LinkContainer';
 // import Menu from './Menu'
 // import Info from './Info'
 class App extends Component{
   constructor(props){
     super(props);
-    this.state={
-      webpage :null,
-      skills : null,
-      contact : null
-    }
-    this.container = null;
+    this.wp = React.createRef();
   }
-  getContainer = (page)=>{
+  getContainer = (page)=>{        
     
-    const location = this.state[page.toLowerCase()].scrollIntoView();    
+    this[page.toLowerCase()].scrollIntoView();    
   }
   render(){
     const value = "500px";
@@ -27,7 +23,7 @@ class App extends Component{
         <div className="mainView">
           <div className="menuSection">
             <div className="menuTitle">
-              <div>김상몽 ( Ricky.kim )</div>
+              <div className="name">김상몽 ( Ricky.kim )</div>
               
               <MenuContainer getContainer={this.getContainer}/>
               
@@ -35,22 +31,23 @@ class App extends Component{
             
             <PopupContainer />
             <div className="MainText">
-              i'm ricky
-              skill list : 
+              I'm <br />
+              <h1>Ricky</h1>
+              <div className="jobDiv"> web Publisher / c# programer / web Programer</div>
             </div>
           </div>
           <div className="imageSection">
-            <img src="" />
+            <img src="" alt=""/>
           </div>
         </div>
         
-        <div className="webPage"style = {{height:value,border:border}} ref= {ref => {this.state.webpage = ref}}>
-          webPage
+        <div className="webPage menuContainer"  ref= {ref => {this.webpage = ref}}>
+          <LinkContainer />
         </div>
-        <div className="skills" style = {{height:value,border:border}} ref= {ref => {this.state.skills = ref}}>
+        <div className="skills menuContainer"  ref= {ref => {this.skills = ref}}>
           skill
         </div>
-        <div className="contact" style = {{height:value,border:border}} ref= {ref => {this.state.contact = ref}}>
+        <div className="contact menuContainer" ref= {ref => {this.contact = ref}}>
           contact
         </div>
       </div>

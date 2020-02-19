@@ -1,11 +1,17 @@
 import {createAction,handleActions} from 'redux-actions';
 const POPUP = 'popup/POPUP'
-const GET_CURRENT_PAGE = 'popup/GET_CURRENT_PAGE'
+const LINKPAGE = 'popup/LINKPAGE'
 
-export const PopupChange = createAction(POPUP,currentPage=>currentPage);
+export const PopupChange = createAction(POPUP);
+export const LinkPageChange = createAction(LINKPAGE,(title,link)=>({title,link}));
 
 const initialState = {
-    popupOnOff:false
+    popupOnOff:false,
+    linkOnOff:false,
+    DetailLink:{
+        title:'',
+        link:''
+    }
 };
 
 export default handleActions({
@@ -13,6 +19,14 @@ export default handleActions({
     [POPUP] : (state,action) =>({        
         ...state,
         popupOnOff:!state.popupOnOff
+    }),
+    [LINKPAGE]:(state,action) =>({
+        ...state,
+        linkOnOff:!state.linkOnOff,
+        link:{
+            title:action.payload.title,
+            link:action.payload.link
+        }
     })
 },
 initialState)

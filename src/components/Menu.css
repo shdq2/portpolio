@@ -1,0 +1,9 @@
+.menu-items{
+    color:white;
+}
+.menu{
+    transition:color 0.3s;
+}
+.menu:hover{
+    color:yellow;
+}

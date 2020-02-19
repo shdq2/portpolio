@@ -31,6 +31,7 @@
   height:100%;
   border:1px solid; 
   position:absolute; 
+  background-color:#015761;
 }
 
 .menuSection .menuTitle{
@@ -58,8 +59,14 @@
   height:100%;
   right:100%;
   transition: right 1s;
-  background-color:green;
+  
 }
+
+.menuContainer{
+  min-height:500px;
+  border:1px solid;    
+}
+
 .menuSection .myInfo .myInfo-title{
   width:100%;
   position:relative;
@@ -73,12 +80,27 @@
   right:20px;
   cursor: pointer;
 }
-
+.menuTitle .name{
+  font-size:25px;
+  font-weight:500;
+  color:yellow;
+}
 .MainText{
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  font-size:45px;
+  color:yellow;
+}
+.MainText h1{  
+  color:white;
+  margin:0px;
+}
+.MainText .jobDiv{
+  font-size:15px;
+  margin-top:5px;
+  color:white;
 }
 .imageSection{
   width:50%;
@@ -91,6 +113,7 @@
   width:100%;
   position:absolute;
 }
+
 
 /*Main View*/
 @keyframes App-logo-spin {

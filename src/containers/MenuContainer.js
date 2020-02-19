@@ -7,20 +7,14 @@ import { bindActionCreators } from 'redux';
 class Menu extends Component{
     onClickHandler = (e) =>{        
         const target = e.target.getAttribute('target');
-        const {popupActions} = this.props;
+        const {popupActions} = this.props;        
         
-        
-        if(target == "myInfo"){            
+        if(target === "myInfo"){            
             popupActions.PopupChange(target);
         }else{
             this.props.getContainer(target);
-        }
-        
+        }        
     }
-    constructor(props){
-        super(props);
-    }
-
     render(){
         return <MenuComponent onClickHandler = {this.onClickHandler}/>
     }

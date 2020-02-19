@@ -1,6 +1,6 @@
 import React from 'react';
 import './Popup.css'
-import {PopupChange} from '../store/modules/popup'
+//import {PopupChange} from '../store/modules/popup'
 
 
 const Items = ()=>{    

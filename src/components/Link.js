@@ -46,7 +46,6 @@ const LinkList = [
 ]
 
 const LinkPage = ({ClickEvent,OnOff,link})=>{
-    console.log(link);
     return(
         <div id="LinkPage" style={{display:(OnOff?'block':'none')}}>
             <div>title : {link["title"]} / link : {link["link"]}</div>
